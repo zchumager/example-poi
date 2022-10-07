@@ -30,25 +30,9 @@ public class DatapoolReader {
 	private int numberOfRows;
 	private int numberOfRecords;
 	
-	public DatapoolReader(
-			String workingDirectory
-			, String datapoolFileName) {
-		
-		this.workingDirectory =
-				workingDirectory;
-		this.datapoolFileName =
-				datapoolFileName;
-		this.datapoolFilePath =
-				this.workingDirectory
-				+ File.separator 
-				+ this.datapoolFileName;
-		
-		System.out.println("**************"
-				+ "***********************");
-		System.out.println("Working Directory: " 
-				+ this.workingDirectory);
-		System.out.println("File full path: " 
-				+ this.datapoolFilePath);
+	public DatapoolReader(String resourcePath) {
+		this.datapoolFilePath = resourcePath;
+
 	}
 	
 	public String getWorkingDirectory() {
